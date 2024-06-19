@@ -31,5 +31,4 @@ func Top10(text string) []string {
 		return wordFreqs[:10]
 	}
 	return wordFreqs
-
 }
