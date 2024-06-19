@@ -79,4 +79,14 @@ func TestTop10(t *testing.T) {
 			require.Equal(t, expected, Top10(text))
 		}
 	})
+
+	t.Run("three words", func(t *testing.T) {
+		require.Len(t, Top10("aa b aa c aa"), 3)
+	})
+
+	t.Run("positive test", func(t *testing.T) {
+		text := "this is a test this is only a test"
+		expected := []string{"a", "is", "test", "this", "only"}
+		require.Equal(t, expected, Top10(text))
+	})
 }
